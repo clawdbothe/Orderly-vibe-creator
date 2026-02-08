@@ -1,0 +1,21 @@
+{
+  "buildCommand": "pnpm run build:vercel",
+  "devCommand": "turbo run dev --filter=frontend",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "outputDirectory": "packages/frontend/dist",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
+  "functions": {
+    "packages/backend/dist/**/*.js": {
+      "runtime": "edge"
+    }
+  },
+  "env": {
+    "LLM_PROVIDER": "openai"
+  }
+}

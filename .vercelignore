@@ -1,0 +1,42 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build artifacts
+dist
+build
+.next
+out
+
+# Turbo
+.turbo
+
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.*.local
+
+# Documentation
+docs
+*.md
+
+# Scripts
+scripts
+
+# Tests
+coverage
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
