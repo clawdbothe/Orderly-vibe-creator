@@ -8,6 +8,7 @@
     "build": "turbo build",
     "build:vercel": "bash scripts/vercel-build.sh",
     "lint": "turbo lint",
+    "typecheck": "turbo run typecheck",
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
     "clean": "turbo clean && rm -rf node_modules",
     "generate:registry": "node scripts/generate-registry.mjs"
