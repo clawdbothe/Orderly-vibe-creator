@@ -3,8 +3,7 @@
  */
 
 import { Hono } from "hono";
-import { cors } from "@hono/cors";
-import { logger } from "hono/logger";
+import { cors } from "hono/cors";
 
 // Routes
 import { agentRoutes } from "./routes/agent";
@@ -15,12 +14,15 @@ const app = new Hono();
 
 // Middleware
 app.use("*", cors());
-app.use("*", logger());
+app.use("*", async (c, next) => {
+  console.log(`${c.req.method} ${c.req.url}`);
+  await next();
+});
 
 // Health check
 app.get("/", (c) => {
   return c.json({
-    name: "Orderly AI Architect API",
+    name: "Orderly Vibe Creator API",
     version: "0.1.0",
     status: "healthy",
   });

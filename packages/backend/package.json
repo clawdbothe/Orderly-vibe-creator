@@ -13,7 +13,6 @@
     "@orderly/shared": "workspace:*",
     "hono": "^4.0.0",
     "@hono/zod-validator": "^0.4.3",
-    "@hono/cors": "^1.0.1",
     "@ai-sdk/openai": "^1.1.0",
     "ai": "^4.0.0",
     "drizzle-orm": "^0.36.4",
