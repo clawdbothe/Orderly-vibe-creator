@@ -1,4 +1,4 @@
-# Orderly AI Architect
+# Orderly Vibe Creator
 
 > AI-powered DEX construction platform - Generate complete decentralized exchange applications with natural language
 
