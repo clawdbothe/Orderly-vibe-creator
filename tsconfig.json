@@ -1,0 +1,17 @@
+{
+  "extends": "@orderly/tsconfig/base.json",
+  "compilerOptions": {
+    "paths": {
+      "@orderly/*": ["./packages/*/src"]
+    }
+  },
+  "include": [],
+  "references": [
+    { "path": "./packages/shared" },
+    { "path": "./packages/frontend" },
+    { "path": "./packages/backend" },
+    { "path": "./packages/runtime" },
+    { "path": "./packages/registry" },
+    { "path": "./packages/tsconfig" }
+  ]
+}
