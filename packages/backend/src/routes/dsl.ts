@@ -3,7 +3,9 @@
  */
 
 import { Hono } from "hono";
-import { validateDSL } from "@orderly/shared";
+
+// TODO: Import from @orderly/shared when shared package is ready
+// import { validateDSL } from "@orderly/shared";
 
 const app = new Hono();
 
@@ -13,21 +15,13 @@ const app = new Hono();
 app.post("/validate", async (c) => {
   const { dsl } = await c.req.json();
 
-  const result = validateDSL(dsl);
-
-  if (!result.success) {
-    return c.json(
-      {
-        success: false,
-        error: result.error?.issues,
-      },
-      400
-    );
-  }
+  // TODO: Implement validation
+  // const result = validateDSL(dsl);
 
   return c.json({
     success: true,
-    data: result.data,
+    message: "Validation not implemented yet",
+    // data: result.data,
   });
 });
 

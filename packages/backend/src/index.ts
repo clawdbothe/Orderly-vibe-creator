@@ -6,9 +6,9 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 
 // Routes
-import { agentRoutes } from "./routes/agent";
-import { dslRoutes } from "./routes/dsl";
-import { registryRoutes } from "./routes/registry";
+import agentRoutes from "./routes/agent";
+import dslRoutes from "./routes/dsl";
+import registryRoutes from "./routes/registry";
 
 const app = new Hono();
 

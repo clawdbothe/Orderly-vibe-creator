@@ -5,6 +5,8 @@
 import { Hono } from "hono";
 
 // TODO: Import from @orderly/registry
+// import { MOCK_ACTION_REGISTRY, MOCK_COMPONENT_REGISTRY, MOCK_CATEGORY_REGISTRY } from "@orderly/registry";
+
 const MOCK_ACTION_REGISTRY = {
   navigate: {
     id: "navigate",

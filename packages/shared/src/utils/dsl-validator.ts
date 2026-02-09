@@ -55,9 +55,9 @@ const LayoutNodeSchema: z.ZodType = z.lazy(() =>
 );
 
 /**
- * DSL Schema
+ * DSL Schema (Zod version)
  */
-export const DSLSchema = z.object({
+export const DSLSchemaZod = z.object({
   layout: LayoutNodeSchema,
   behaviors: z.array(BehaviorRuleSchema),
 });
@@ -67,10 +67,10 @@ export const DSLSchema = z.object({
  */
 export function validateDSL(data: unknown): {
   success: boolean;
-  data?: z.infer<typeof DSLSchema>;
+  data?: z.infer<typeof DSLSchemaZod>;
   error?: z.ZodError;
 } {
-  const result = DSLSchema.safeParse(data);
+  const result = DSLSchemaZod.safeParse(data);
   return {
     success: result.success,
     data: result.success ? result.data : undefined,
