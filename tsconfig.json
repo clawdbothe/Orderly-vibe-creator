@@ -2,7 +2,12 @@
   "extends": "@orderly/tsconfig/base.json",
   "compilerOptions": {
     "paths": {
-      "@orderly/*": ["./packages/*/src"]
+      "@orderly/shared": ["./packages/shared/src"],
+      "@orderly/frontend": ["./packages/frontend/src"],
+      "@orderly/backend": ["./packages/backend/src"],
+      "@orderly/runtime": ["./packages/runtime/src"],
+      "@orderly/registry": ["./packages/registry/src"],
+      "@orderly/tsconfig": ["./packages/tsconfig"]
     }
   },
   "include": [],
@@ -11,7 +16,6 @@
     { "path": "./packages/frontend" },
     { "path": "./packages/backend" },
     { "path": "./packages/runtime" },
-    { "path": "./packages/registry" },
-    { "path": "./packages/tsconfig" }
+    { "path": "./packages/registry" }
   ]
 }
