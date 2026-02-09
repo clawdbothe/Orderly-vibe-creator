@@ -13,10 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "isolatedModules": true,
     "incremental": true,
-    "paths": {
-      "@orderly/*": ["./packages/*/src"]
-    }
+    "composite": true
   }
 }
