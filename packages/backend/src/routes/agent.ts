@@ -6,12 +6,12 @@ import { Hono } from "hono";
 import { streamText } from "ai";
 import { openai } from "@ai-sdk/openai";
 
-const agentRoutes = new Hono();
+const app = new Hono();
 
 /**
  * POST /api/agent/generate - Generate DSL from natural language
  */
-agentRoutes.post("/generate", async (c) => {
+app.post("/generate", async (c) => {
   const { prompt, options } = await c.req.json();
 
   // TODO: Implement LangGraph workflow
@@ -31,7 +31,7 @@ agentRoutes.post("/generate", async (c) => {
 /**
  * POST /api/agent/analyze - Analyze intent and extract categories
  */
-agentRoutes.post("/analyze", async (c) => {
+app.post("/analyze", async (c) => {
   const { prompt } = await c.req.json();
 
   // TODO: Implement category analysis
@@ -49,4 +49,4 @@ function streamTextToResponse(stream: ReturnType<typeof streamText>) {
   return new Response();
 }
 
-export default agentRoutes;
+export default app;

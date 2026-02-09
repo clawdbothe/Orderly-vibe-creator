@@ -5,12 +5,12 @@
 import { Hono } from "hono";
 import { validateDSL } from "@orderly/shared";
 
-const dslRoutes = new Hono();
+const app = new Hono();
 
 /**
  * POST /api/dsl/validate - Validate DSL schema
  */
-dslRoutes.post("/validate", async (c) => {
+app.post("/validate", async (c) => {
   const { dsl } = await c.req.json();
 
   const result = validateDSL(dsl);
@@ -34,7 +34,7 @@ dslRoutes.post("/validate", async (c) => {
 /**
  * POST /api/dsl/export - Convert DSL to Next.js code
  */
-dslRoutes.post("/export", async (c) => {
+app.post("/export", async (c) => {
   const { dsl, format } = await c.req.json();
 
   // TODO: Implement DSL to Next.js conversion
@@ -44,4 +44,4 @@ dslRoutes.post("/export", async (c) => {
   });
 });
 
-export default dslRoutes;
+export default app;

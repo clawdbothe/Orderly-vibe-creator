@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "build:vercel": "bash scripts/vercel-build.sh",
+    "build:vercel": "turbo build",
     "lint": "turbo lint",
     "typecheck": "turbo run typecheck",
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",

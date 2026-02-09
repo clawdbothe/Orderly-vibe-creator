@@ -10,26 +10,12 @@ echo "🚀 Starting Vercel build..."
 # Install dependencies (if needed)
 if [ ! -d "node_modules" ]; then
   echo "📦 Installing dependencies..."
-  pnpm install --frozen-lockfile
+  pnpm install
 fi
 
-# Build backend
-echo "🔨 Building backend..."
-cd packages/backend
-pnpm build
-cd ../..
-
-# Build shared
-echo "🔨 Building shared..."
-cd packages/shared
-pnpm build
-cd ../..
-
-# Build frontend
-echo "🔨 Building frontend..."
-cd packages/frontend
-pnpm build
-cd ../..
+# Build all packages using turbo
+echo "🔨 Building all packages..."
+pnpm run build
 
 # Copy api entry point
 echo "📝 Preparing API functions..."

@@ -46,33 +46,33 @@ const MOCK_CATEGORY_REGISTRY = {
   },
 };
 
-const registryRoutes = new Hono();
+const app = new Hono();
 
 /**
  * GET /api/registry/actions - Get action registry
  */
-registryRoutes.get("/actions", (c) => {
+app.get("/actions", (c) => {
   return c.json(MOCK_ACTION_REGISTRY);
 });
 
 /**
  * GET /api/registry/components - Get component registry
  */
-registryRoutes.get("/components", (c) => {
+app.get("/components", (c) => {
   return c.json(MOCK_COMPONENT_REGISTRY);
 });
 
 /**
  * GET /api/registry/categories - Get category registry
  */
-registryRoutes.get("/categories", (c) => {
+app.get("/categories", (c) => {
   return c.json(MOCK_CATEGORY_REGISTRY);
 });
 
 /**
  * GET /api/registry/components/:category - Get components by category
  */
-registryRoutes.get("/components/:category", (c) => {
+app.get("/components/:category", (c) => {
   const category = c.req.param("category");
   const categoryData = MOCK_CATEGORY_REGISTRY[category as keyof typeof MOCK_CATEGORY_REGISTRY];
 
@@ -88,4 +88,4 @@ registryRoutes.get("/components/:category", (c) => {
   return c.json(components);
 });
 
-export default registryRoutes;
+export default app;
