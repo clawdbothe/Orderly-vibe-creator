@@ -25,15 +25,12 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
-    "lint": "eslint src --ext .ts",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint src --ext .ts"
   },
   "dependencies": {
-    "@orderly/shared": "workspace:*",
-    "zod": "^3.24.1"
+    "@orderly/shared": "workspace:*"
   },
   "devDependencies": {
-    "typescript": "^5.7.2",
-    "@orderly/tsconfig": "workspace:*"
+    "typescript": "^5.9.3"
   }
 }

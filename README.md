@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 
-Orderly AI Architect is a next-generation platform that uses AI to generate complex DEX applications through a declarative DSL (Domain Specific Language) instead of writing code directly.
+Orderly Vibe Creator is a next-generation platform that uses AI to generate complex DEX applications through a declarative DSL (Domain Specific Language) instead of writing code directly.
 
 ### Core Philosophy
 
@@ -13,7 +13,7 @@ Orderly AI Architect is a next-generation platform that uses AI to generate comp
 - **Traditional**: AI writes React code (prone to errors, hard to maintain)
 - **Orderly AI**: AI generates structured DSL (safe, verifiable, debuggable)
 
-## 📋 Architecture
+## 🏗️ Architecture
 
 ```
 User Natural Language
@@ -29,50 +29,45 @@ DSL Intermediate State
     └─ Export Mode (Next.js 14, production code)
 ```
 
-### Key Technologies
+## 📦 Monorepo Structure
 
-**Frontend**:
-- React 19 (latest features: Server Components, useOptimistic, Actions)
-- Vite 6 (ultra-fast HMR)
-- TanStack Router v2 (type-safe routing)
-- Zustand 5 (lightweight state management)
-- Tailwind CSS v4 + shadcn/ui
+```
+orderly-vibe-creator/
+├── packages/
+│   ├── shared/          # Shared types and utilities
+│   ├── frontend/         # React 19 Web UI
+│   ├── backend/          # Hono API server
+│   ├── runtime/           # Behavior Engine (Event Bus, Rule Evaluator)
+│   └── registry/         # Component and Action registries
+├── scripts/             # Automation scripts
+├── docs/                # Documentation
+├── pnpm-workspace.yaml
+├── turbo.json
+└── package.json
+```
+
+## 🛠️ Technology Stack
+
+### Frontend
+- React 19 (latest features)
+- Vite 6
+- TanStack Router v2
+- Zustand 5
+- Tailwind CSS v4
+- shadcn/ui
 - Vercel AI SDK v4
 
-**Backend**:
-- Hono 4 (ultra-lightweight, Edge Runtime)
-- Drizzle ORM (3x faster than Prisma)
-- Turso (edge SQLite database)
-- Vercel AI SDK v4 (unified LLM interface)
-- OpenAI (primary) + GLM/MiniMax (switchable)
+### Backend
+- Hono 4 (Edge Runtime)
+- Drizzle ORM
+- Vercel AI SDK v4
+- OpenAI + GLM/MiniMax (switchable)
 
-**Monorepo**:
+### Monorepo
 - Turborepo (incremental caching)
 - pnpm workspace (fast installation)
 
-## 🏗️ Monorepo Structure
-
-```
-orderly-ai-architect/
-├── packages/
-│   ├── frontend/          # React 19 Web UI
-│   ├── backend/           # Hono API server
-│   ├── runtime/           # Behavior Engine (Event Bus, Rule Evaluator)
-│   ├── shared/            # Shared types and utilities
-│   └── registry/         # Action/Component registries (auto-generated)
-├── scripts/              # Automation scripts
-├── docs/                 # Documentation
-└── apps/                 # Optional standalone apps
-```
-
-## 🛠️ Development
-
-### Prerequisites
-
-- Node.js 22+
-- pnpm 9+
-
-### Installation
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
@@ -88,25 +83,12 @@ pnpm build
 pnpm lint
 ```
 
-### Project Scripts
-
-| Script | Description |
-|---------|-------------|
-| `pnpm dev` | Start all packages in development mode |
-| `pnpm build` | Build all packages |
-| `pnpm lint` | Lint all packages |
-| `pnpm format` | Format code with Prettier |
-| `pnpm clean` | Clean all build artifacts |
-| `pnpm generate:registry` | Auto-generate component registry |
-
 ## 📚 Documentation
 
-- [Technical Design](./docs/TECH_DESIGN.md) - Complete architecture and DSL design
-- [Tech Stack](./docs/TECH_STACK.md) - Technology choices and rationale
-
-## 🤝 Contributing
-
-This project is currently in active development. We welcome contributions!
+- [Technical Design](./docs/TECH_DESIGN.md)
+- [Tech Stack](./docs/TECH_STACK.md)
+- [Deployment Guide](./DEPLOYMENT.md)
+- [Automation Guide](./AUTOMATION.md)
 
 ## 📄 License
 

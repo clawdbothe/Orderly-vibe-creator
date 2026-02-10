@@ -2,28 +2,27 @@
   "name": "@orderly/backend",
   "version": "0.1.0",
   "type": "module",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "lint": "eslint src --ext .ts",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint src --ext .ts"
   },
   "dependencies": {
-    "@orderly/shared": "workspace:*",
     "hono": "^4.0.0",
-    "@hono/zod-validator": "^0.4.3",
     "@ai-sdk/openai": "^1.1.0",
     "ai": "^4.0.0",
     "drizzle-orm": "^0.36.4",
     "@libsql/client": "^0.10.0",
     "zod": "^3.24.1",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "@orderly/shared": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.19.2",
     "@types/node": "^22.0.0",
-    "typescript": "^5.7.2",
-    "@orderly/tsconfig": "workspace:*"
+    "typescript": "^5.9.3",
+    "eslint": "^9.15.0"
   }
 }
