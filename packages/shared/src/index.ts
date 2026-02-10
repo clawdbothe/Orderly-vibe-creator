@@ -1,7 +1,6 @@
 /**
- * @orderly/shared - Shared types, utilities, and constants
+ * @orderly/shared - Shared types and utilities
  */
 
 export * from "./types";
-export * from "./constants";
 export * from "./utils";
